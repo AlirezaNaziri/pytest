@@ -59,7 +59,7 @@ jobs:
     - name: Run tests with pytest
       run: |
         pip install pytest pytest-cov
-        pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+        pytest test_myfunc.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
 
 
 
