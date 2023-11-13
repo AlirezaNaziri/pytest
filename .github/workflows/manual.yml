@@ -37,10 +37,10 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
 
-    # - name: Create and start virtual environment
-    #   run: |
-    #     python -m venv venv
-    #     source venv/bin/activate
+    - name: Create and start virtual environment
+      run: |
+        python -m venv venv
+        source venv/bin/activate
     
     # - name: Set up dependency caching for faster installs
     #   uses: actions/cache@v3
@@ -59,7 +59,8 @@ jobs:
     - name: Run tests with pytest
       run: |
         pip install pytest pytest-cov
-        pytest test_myfunc.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+        pytest test_myfunc.py 
+  # --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
 
 
 
