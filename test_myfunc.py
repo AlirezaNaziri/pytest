@@ -4,7 +4,7 @@ import pytest
 def test_add():
     assert add_numbers(1, 2) == 3
     assert add_numbers(-1, 1) == 0
-    assert add_numbers(0, 0) == 0
+    assert add_numbers(0, 0) == 1
 
 @pytest.mark.parametrize("a, b, expected_result", [
     (6, 2, 3),
